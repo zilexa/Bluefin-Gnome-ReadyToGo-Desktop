@@ -94,12 +94,15 @@ menu-layout='Redmond'
 default-menu-view-redmond='Pinned_Apps'
 enable-horizontal-flip=true
 vert-separator=true
-menu-button-appearance='Text'
+menu-button-appearance='Icon'
+menu-button-icon='view-app-grid-symbolic'
+menu-button-icon-size=48
 menu-button-padding=0
 directory-shortcuts=[{'id': 'ArcMenu_Home', 'name': 'Home', 'icon': 'ArcMenu_Home'}, {'id': 'ArcMenu_Documents', 'name': 'Documents', 'icon': 'ArcMenu_Documents'}, {'id': 'ArcMenu_Pictures', 'name': 'Pictures', 'icon': 'ArcMenu_Pictures'}, {'id': 'ArcMenu_Downloads', 'name': 'Downloads', 'icon': 'ArcMenu_Downloads'}]
 application-shortcuts=[{'id': 'org.gnome.DiskUtility.desktop'}, {'id': 'org.gnome.baobab.desktop', 'name': 'Disk Usage'}, {'id': 'io.missioncenter.MissionCenter.desktop'}, {'name': 'Separator', 'icon': 'list-remove-symbolic', 'id': 'ArcMenu_Separator'}, {'id': 'io.github.kolunmi.Bazaar.desktop'}, {'id': 'com.github.tchx84.Flatseal.desktop'}, {'name': 'Separator', 'icon': 'list-remove-symbolic', 'id': 'ArcMenu_Separator'}, {'id': 'system-update.desktop', 'name': 'Update System'}, {'name': 'Separator', 'icon': 'list-remove-symbolic', 'id': 'ArcMenu_Separator'}, {'name': 'Extensions', 'icon': 'com.mattjakeman.ExtensionManager', 'id': 'com.mattjakeman.ExtensionManager.desktop'}, {'id': 'page.tesk.Refine.desktop'}, {'name': 'Settings', 'icon': 'org.gnome.Settings', 'id': 'org.gnome.Settings.desktop'}]
-power-options=[(0, true), (1, true), (2, true), (3, true), (4, false), (5, true), (6, true), (7, false)]
-pinned-apps=[{'id': 'org.freefilesync.FreeFileSync.desktop'}, {'id': 'org.mozilla.firefox.desktop'}, {'id': 'org.onlyoffice.desktopeditors.desktop'}, {'id': 'com.collaboraoffice.Office.desktop'}, {'id': 'org.gnome.Calculator.desktop'}, {'id': 'org.gnome.TextEditor.desktop'}, {'id': 'com.github.PintaProject.Pinta.desktop'}, {'id': 'org.gimp.GIMP.desktop'}, {'id': '7dc3dfc0-e6a3-487b-b592-d4ff8f4299c2', 'name': 'Sound & Video', 'isFolder': 'true'}, {'id': 'org.gnome.Ptyxis.desktop'}, {'id': 'org.gnome.Maps.desktop'}]
+power-options=[(0, true), (1, true), (2, true), (6, true), (3, true), (4, false), (5, false), (7, false)]
+pinned-apps=[{'id': 'org.mozilla.firefox.desktop'}, {'id': 'org.onlyoffice.desktopeditors.desktop'}, {'id': 'com.collaboraoffice.Office.desktop'}, {'id': 'org.gnome.TextEditor.desktop'}, {'id': 'org.gnome.Calculator.desktop'}, {'id': 'com.github.PintaProject.Pinta.desktop'}, {'id': 'org.gimp.GIMP.desktop'}, {'id': '7dc3dfc0-e6a3-487b-b592-d4ff8f4299c2', 'name': 'Sound & Video', 'isFolder': 'true'}, {'id': 'org.gnome.Ptyxis.desktop'}, {'id': 'koofr.desktop'}, {'id': 'io.ente.photos.desktop'}, {'id': 'org.freefilesync.FreeFileSync.desktop'}]
+
 [org/gnome/shell/extensions/arcmenu/pinned-apps-folders/7dc3dfc0-e6a3-487b-b592-d4ff8f4299c2]
 pinned-apps=[{'id': 'fr.handbrake.ghb.desktop'}, {'id': 'org.gnome.gitlab.YaLTeR.VideoTrimmer.desktop'}, {'name': 'LosslessCut', 'id': 'no.mifi.losslesscut.desktop'}, {'id': 'io.bassi.Amberol.desktop'}, {'id': 'org.gnome.SoundRecorder.desktop'}, {'id': 'org.audacityteam.Audacity.desktop'}]
 

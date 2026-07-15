@@ -90,7 +90,7 @@ window-preview-title-position='TOP'
 # Extension: Arcmenu
 [org/gnome/shell/extensions/arcmenu]
 multi-monitor=true
-menu-layout='Redmond'
+menu-layout='redmond'
 default-menu-view-redmond='Pinned_Apps'
 enable-horizontal-flip=true
 vert-separator=true

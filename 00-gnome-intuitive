@@ -159,7 +159,7 @@ previous-days=30
 delete-previous=true
 random-mode-enabled=false
 revert-to-current-image=true
-icon-name='mid-frame-symbolic'
+icon-name='low-frame-symbolic'
 
 # Extension: Search Light
 [org/gnome/shell/extensions/search-light]

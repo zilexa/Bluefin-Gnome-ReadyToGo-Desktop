@@ -229,14 +229,14 @@ HandleLidSwitch=suspend-then-hibernate
 LidSwitchIgnoreInhibited=yes
 HoldoffTimeoutSec=20s
 IdleAction=suspend-then-hibernate
-#IdleActionSec=30min commented out because logind cannot distinguish between battery power or AC so will always suspend.. this needs to be configured in Gnome settings.
+IdleActionSec=30min # the systemd default is 30min, if you omit this value, you'll still get suspend-then-hibernate after 30min
 EOF
 
 echo "Creating /etc/systemd/sleep.conf.d/sleep.conf ..."
 sudo mkdir -p /etc/systemd/sleep.conf.d
 sudo tee /etc/systemd/sleep.conf.d/sleep.conf > /dev/null <<EOF
 [Sleep]
-HibernateDelaySec=75min
+HibernateDelaySec=60min # after this amount of time suspended, switch to hibernation
 EOF
 
 echo ""

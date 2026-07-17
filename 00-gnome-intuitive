@@ -6,9 +6,10 @@ ambient-enabled=true
 idle-dim=true
 power-button-action='hibernate'
 power-saver-profile-on-low-battery=true
+sleep-inactive-battery-type='suspend'
 sleep-inactive-battery-timeout=1800
+sleep-inactive-ac-type='suspend'
 sleep-inactive-ac-timeout=7200
-sleep-inactive-ac-type='nothing'
 
 [org/gnome/desktop/session]
 idle-delay=uint32 900

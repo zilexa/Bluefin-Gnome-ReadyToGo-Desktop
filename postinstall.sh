@@ -220,8 +220,7 @@ sudo swapon -av
 
 # if Hibernation does not work, SELinux needs to be configured. Not part of this script. 
 
-# When closing the lid, suspend-then-hibernate
-# When pressing power key, go directly into hibernation
+# When closing the lid, suspend-then-hibernate & When pressing power key, go directly into hibernation
 sudo mkdir -p /etc/systemd/logind.conf.d
 sudo tee /etc/systemd/logind.conf.d/lid.conf > /dev/null <<EOF
 [Login]
@@ -252,7 +251,6 @@ sudo systemctl daemon-reload
 
 echo ""
 echo "Completed successfully, please close this window and reboot!"
-
 
 echo "___________________________________________________________________________________"
 echo "                                                                                   "

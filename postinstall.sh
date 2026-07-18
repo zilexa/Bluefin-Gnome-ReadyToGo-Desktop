@@ -220,7 +220,8 @@ sudo swapon -av
 
 # if Hibernation does not work, SELinux needs to be configured. Not part of this script. 
 
-# Now configure the system: Power key -> hibernate. When the system is idle for 30min or when closing the laptop -> suspend for 75min then hibernate (zero power consumption, to prevent battery drain). 
+# When closing the lid, suspend-then-hibernate
+# When pressing power key, go directly into hibernation
 sudo mkdir -p /etc/systemd/logind.conf.d
 sudo tee /etc/systemd/logind.conf.d/lid.conf > /dev/null <<EOF
 [Login]
@@ -229,15 +230,25 @@ HandleLidSwitch=suspend-then-hibernate
 LidSwitchIgnoreInhibited=yes
 HoldoffTimeoutSec=20s
 IdleAction=suspend-then-hibernate
-IdleActionSec=30min # the systemd default is 30min, if you omit this value, you'll still get suspend-then-hibernate after 30min
 EOF
 
+# Set the delay to initiate hibernation, after suspend, by creating a drop-in file to override system default
 echo "Creating /etc/systemd/sleep.conf.d/sleep.conf ..."
 sudo mkdir -p /etc/systemd/sleep.conf.d
 sudo tee /etc/systemd/sleep.conf.d/sleep.conf > /dev/null <<EOF
 [Sleep]
 HibernateDelaySec=60min # after this amount of time suspended, switch to hibernation
 EOF
+
+# Make Gnome call suspend-then-hibernate instead of suspend by creating a drop-in file to override system default
+sudo mkdir -p /etc/systemd/system/systemd-suspend.service.d
+sudo tee /etc/systemd/system/systemd-suspend.service.d/override.conf <<'EOF'
+[Service]
+ExecStart=
+ExecStart=/usr/lib/systemd/systemd-sleep suspend-then-hibernate
+EOF
+
+sudo systemctl daemon-reload
 
 echo ""
 echo "Completed successfully, please close this window and reboot!"

@@ -231,12 +231,12 @@ HoldoffTimeoutSec=20s
 IdleAction=suspend-then-hibernate
 EOF
 
-# Set the delay to initiate hibernation, after suspend, by creating a drop-in file to override system default
+# Configure how long after suspending, the system should wake up, write memory to disk and turn off (=hibernation). 
 echo "Creating /etc/systemd/sleep.conf.d/sleep.conf ..."
 sudo mkdir -p /etc/systemd/sleep.conf.d
 sudo tee /etc/systemd/sleep.conf.d/sleep.conf > /dev/null <<EOF
 [Sleep]
-HibernateDelaySec=60min # after this amount of time suspended, switch to hibernation
+HibernateDelaySec=60min # after this amount of time suspended, start hibernation process
 EOF
 
 # Make Gnome call suspend-then-hibernate instead of suspend by creating a drop-in file to override system default
@@ -247,7 +247,24 @@ ExecStart=
 ExecStart=/usr/lib/systemd/systemd-sleep suspend-then-hibernate
 EOF
 
+# Bluefin specific: Bluefin only checks for system updates 20min after a reboot, not after waking from hibernation. Create a timer to support auto-update with hibernation
+sudo tee /etc/systemd/system/uupd-resume.timer > /dev/null <<'EOF'
+[Unit]
+Description=Auto Update System Timer For Universal Blue (post-sleep)
+Wants=network-online.target
+After=suspend.target hibernate.target suspend-then-hibernate.target
+
+[Timer]
+OnActiveSec=20min
+RemainAfterElapse=no
+Unit=uupd.service
+
+[Install]
+WantedBy=suspend.target hibernate.target suspend-then-hibernate.target
+EOF
+
 sudo systemctl daemon-reload
+sudo systemctl enable uupd-resume.timer
 
 echo ""
 echo "Completed successfully, please close this window and reboot!"

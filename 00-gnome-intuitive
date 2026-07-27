@@ -67,6 +67,7 @@ favorite-apps=['org.gnome.Nautilus.desktop', 'org.mozilla.firefox.desktop', 'org
 [org/gnome/shell/extensions/dash-to-panel]
 isolate-monitors=true
 hide-overview-on-startup=true
+overview-click-to-exit=true
 animate-appicon-hover=true
 animate-appicon-hover-animation-convexity={'RIPPLE': 2.0, 'PLANK': 1.0, 'SIMPLE': 0.0}
 animate-appicon-hover-animation-extent={'RIPPLE': 4, 'PLANK': 4, 'SIMPLE': 1}
@@ -91,6 +92,7 @@ window-preview-title-position='TOP'
 
 # Extension: Arcmenu
 [org/gnome/shell/extensions/arcmenu]
+hide-overview-on-arcmenu-open=true
 multi-monitor=true
 menu-layout='redmond'
 default-menu-view-redmond='Pinned_Apps'

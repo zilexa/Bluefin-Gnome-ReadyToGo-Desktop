@@ -78,8 +78,6 @@ bash $HOME/Downloads/install-gnome-extensions.sh --enable 3193
 bash $HOME/Downloads/install-gnome-extensions.sh --enable 4338
 # Blur My Shell ()
 bash $HOME/Downloads/install-gnome-extensions.sh --enable 5263
-# Removable Drive menu (drive-menu@gnome-shell-extensions.gcampax.github.com)
-bash $HOME/Downloads/install-gnome-extensions.sh --enable 7
 # Custom Hot Corners (custom-hot-corners-extended@G-dH.github.com)
 bash $HOME/Downloads/install-gnome-extensions.sh --enable 4167
 # Bing Wallpaper (BingWallpaper@ineffable-gmail.com)

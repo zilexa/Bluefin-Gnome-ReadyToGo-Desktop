@@ -59,7 +59,7 @@ date-time-format='detailed'
 default-visible-columns=['name', 'size', 'type', 'date_modified', 'date_created']
 
 [org/gnome/shell]
-enabled-extensions=['appindicatorsupport@rgcjonas.gmail.com', 'blur-my-shell@aunetx', 'allowlockedremotedesktop@kamens.us', 'arcmenu@arcmenu.com', 'BingWallpaper@ineffable-gmail.com', 'custom-hot-corners-extended@G-dH.github.com', 'dash-to-panel@jderose9.github.com', 'gtk4-ding@smedius.gitlab.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'tilingshell@ferrarodomenico.com', 'search-light@icedman.github.com']
+enabled-extensions=['appindicatorsupport@rgcjonas.gmail.com', 'blur-my-shell@aunetx', 'allowlockedremotedesktop@kamens.us', 'arcmenu@arcmenu.com', 'BingWallpaper@ineffable-gmail.com', 'custom-hot-corners-extended@G-dH.github.com', 'dash-to-panel@jderose9.github.com', 'gtk4-ding@smedius.gitlab.com', 'tilingshell@ferrarodomenico.com', 'search-light@icedman.github.com']
 disabled-extensions=['gsconnect@andyholmes.github.io']
 favorite-apps=['org.gnome.Nautilus.desktop', 'org.mozilla.firefox.desktop', 'org.gnome.Calculator.desktop', 'org.onlyoffice.desktopeditors.desktop']
 

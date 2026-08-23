@@ -267,12 +267,3 @@ sudo systemctl enable uupd-resume.timer
 echo ""
 echo "Completed successfully, please close this window and reboot!"
 
-echo "___________________________________________________________________________________"
-echo "                                                                                   "
-echo "                                Optional, after the reboot                         "
-echo "___________________________________________________________________________________"
-# Start Tailscale systray
-# sudo tailscale set --operator=$USER
-# tailscale configure systray --enable-startup=systemd
-# systemctl --user enable --now tailscale-systray
-# now use the systray to login to your Tailscale otherwise the first command needs to be executed again.

@@ -95,6 +95,7 @@ window-preview-title-position='TOP'
 
 # Extension: Arcmenu
 [org/gnome/shell/extensions/arcmenu]
+hide-overview-on-startup=true
 hide-overview-on-arcmenu-open=true
 multi-monitor=true
 menu-layout='redmond'

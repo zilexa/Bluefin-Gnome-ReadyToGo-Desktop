@@ -66,6 +66,7 @@ favorite-apps=['org.gnome.Nautilus.desktop', 'org.mozilla.firefox.desktop', 'org
 # Extension: Dash-to-Panel configuration
 [org/gnome/shell/extensions/dash-to-panel]
 isolate-monitors=true
+isolate-workspaces=true
 hide-overview-on-startup=true
 overview-click-to-exit=true
 animate-appicon-hover=true
@@ -81,12 +82,14 @@ panel-element-positions='{"0":[{"element":"activitiesButton","visible":false,"po
 panel-positions='{"0":"LEFT"}'
 panel-sizes='{"0":55}'
 context-menu-entries='[{"title":"Terminal","cmd":"TERMINALSETTINGS"},{"title":"System monitor","cmd":"gnome-system-monitor"},{"title":"Files","cmd":"nautilus"},{"title":"Gnome Extensions","cmd":"flatpak run com.mattjakeman.ExtensionManager"}]'
-trans-dynamic-anim-target=0.80000000000000004
-trans-use-custom-opacity=true
-trans-use-custom-gradient=true
 trans-use-dynamic-opacity=true
-trans-gradient-bottom-opacity=0.35000000000000003
-trans-panel-opacity=0.45000000000000001
+trans-use-custom-gradient=true
+trans-dynamic-anim-target=0.45
+trans-dynamic-anim-time=150
+trans-dynamic-distance=20
+trans-gradient-bottom-opacity=0
+trans-gradient-top-opacity=1
+trans-panel-opacity=0
 tray-padding=-1
 window-preview-title-position='TOP'
 
@@ -103,8 +106,8 @@ menu-button-icon='view-app-grid-symbolic'
 menu-button-icon-size=48
 menu-button-padding=0
 directory-shortcuts=[{'id': 'ArcMenu_Home', 'name': 'Home', 'icon': 'ArcMenu_Home'}, {'id': 'ArcMenu_Documents', 'name': 'Documents', 'icon': 'ArcMenu_Documents'}, {'id': 'ArcMenu_Pictures', 'name': 'Pictures', 'icon': 'ArcMenu_Pictures'}, {'id': 'ArcMenu_Downloads', 'name': 'Downloads', 'icon': 'ArcMenu_Downloads'}]
-application-shortcuts=[{'id': 'org.gnome.DiskUtility.desktop'}, {'id': 'org.gnome.baobab.desktop', 'name': 'Disk Usage'}, {'id': 'io.missioncenter.MissionCenter.desktop'}, {'name': 'Separator', 'icon': 'list-remove-symbolic', 'id': 'ArcMenu_Separator'}, {'id': 'io.github.kolunmi.Bazaar.desktop'}, {'id': 'com.github.tchx84.Flatseal.desktop'}, {'name': 'Separator', 'icon': 'list-remove-symbolic', 'id': 'ArcMenu_Separator'}, {'id': 'system-update.desktop', 'name': 'Update System'}, {'name': 'Separator', 'icon': 'list-remove-symbolic', 'id': 'ArcMenu_Separator'}, {'name': 'Extensions', 'icon': 'com.mattjakeman.ExtensionManager', 'id': 'com.mattjakeman.ExtensionManager.desktop'}, {'id': 'page.tesk.Refine.desktop'}, {'name': 'Settings', 'icon': 'org.gnome.Settings', 'id': 'org.gnome.Settings.desktop'}]
-power-options=[(0, true), (1, true), (2, true), (6, true), (3, true), (4, false), (5, false), (7, false)]
+application-shortcuts=[{'id': 'org.gnome.DiskUtility.desktop'}, {'id': 'org.gnome.baobab.desktop', 'name': 'Disk Usage'}, {'id': 'io.missioncenter.MissionCenter.desktop'}, {'name': 'Separator', 'icon': 'list-remove-symbolic', 'id': 'ArcMenu_Separator'}, {'id': 'io.github.kolunmi.Bazaar.desktop'}, {'id': 'com.github.tchx84.Flatseal.desktop'}, {'name': 'Separator', 'icon': 'list-remove-symbolic', 'id': 'ArcMenu_Separator'}, {'name': 'Extensions', 'icon': 'com.mattjakeman.ExtensionManager', 'id': 'com.mattjakeman.ExtensionManager.desktop'}, {'id': 'page.tesk.Refine.desktop'}, {'name': 'Settings', 'icon': 'org.gnome.Settings', 'id': 'org.gnome.Settings.desktop'}]
+power-options=[(6, true), (2, true), (3, true), (0, true), (1, false), (4, false), (5, false), (7, false)]
 pinned-apps=[{'id': 'org.mozilla.firefox.desktop'}, {'id': 'org.onlyoffice.desktopeditors.desktop'}, {'id': 'com.collaboraoffice.Office.desktop'}, {'id': 'org.gnome.TextEditor.desktop'}, {'id': 'org.gnome.Calculator.desktop'}, {'id': 'com.github.PintaProject.Pinta.desktop'}, {'id': 'org.gimp.GIMP.desktop'}, {'id': '7dc3dfc0-e6a3-487b-b592-d4ff8f4299c2', 'name': 'Sound & Video', 'isFolder': 'true'}, {'id': 'org.gnome.Ptyxis.desktop'}, {'id': 'koofr.desktop'}, {'id': 'io.ente.photos.desktop'}, {'id': 'org.freefilesync.FreeFileSync.desktop'}]
 
 [org/gnome/shell/extensions/arcmenu/pinned-apps-folders/7dc3dfc0-e6a3-487b-b592-d4ff8f4299c2]

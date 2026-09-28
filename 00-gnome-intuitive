@@ -84,12 +84,12 @@ panel-sizes='{"0":55}'
 context-menu-entries='[{"title":"Files","cmd":"nautilus"},{"title":"Disks","cmd":"gnome-disks"},{"title":"Mission Center","cmd":"flatpak run io.missioncenter.MissionCenter"},{"title":"Terminal","cmd":"TERMINALSETTINGS"}]'
 trans-use-dynamic-opacity=true
 trans-use-custom-gradient=true
-trans-dynamic-anim-target=0.45
+trans-dynamic-anim-target=0.5
 trans-dynamic-anim-time=150
 trans-dynamic-distance=20
-trans-gradient-bottom-opacity=0
-trans-gradient-top-opacity=1
-trans-panel-opacity=0
+trans-gradient-top-opacity=0.80000000000000004
+trans-gradient-bottom-opacity=0.0
+trans-panel-opacity=0.0
 tray-padding=-1
 window-preview-title-position='TOP'
 

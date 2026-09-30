@@ -18,8 +18,8 @@ case ${answer:0:1} in
     y|Y )
     echo "Please type the 2-letter countrycode for the language, for example "de" for German language (no caps):"
     echo "___________________________________________________________________"
-    read -p 'countrycode for example "de" and hit ENTER: ' LANG
-    flatpak config --system --set languages "en;$LANG"
+    read -p 'countrycode for example "de" and hit ENTER: ' SPELL_LANG
+    flatpak config --system --set languages "en;$SPELL_LANG"
     flatpak update -y ;;
     n|N ) ;;
     * ) ;;
@@ -234,7 +234,7 @@ echo "Creating /etc/systemd/sleep.conf.d/sleep.conf ..."
 sudo mkdir -p /etc/systemd/sleep.conf.d
 sudo tee /etc/systemd/sleep.conf.d/sleep.conf > /dev/null <<EOF
 [Sleep]
-HibernateDelaySec=60min # after this amount of time suspended, start hibernation process
+HibernateDelaySec=60min 
 EOF
 
 # Make Gnome call suspend-then-hibernate instead of suspend by creating a drop-in file to override system default
